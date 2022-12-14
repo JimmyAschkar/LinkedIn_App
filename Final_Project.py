@@ -148,7 +148,7 @@ ss = pd.DataFrame({
 ss = ss.dropna()
 
 y = ss["LinkedIn User"]
-X = ss[["Household Income", "Education", "Parent", "Marital Status", "Gender", "Age"]]
+X = ss[["Income", "Education", "Parent", "Marital Status", "Gender", "Age"]]
 
 X_train, X_test, y_train, y_test = train_test_split(X,
                                                     y,
