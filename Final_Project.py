@@ -169,8 +169,8 @@ person = [inc, educ, par, mar, gend, Ag]
 
 predicted_class = lr.predict([person])
 probs = lr.predict_proba([person])
-probs_percent = round(probs) * 100
-#probs_round = round(probs_percent)
+# probs_percent = round(probs) * 100
+# #probs_round = round(probs_percent)
 
 st.markdown("***")
    
@@ -180,9 +180,9 @@ if st.button('Predict'):
             if i == 1:
                 
                 st.subheader("The Model Predicts You ARE a LinkedIn User")
-                st.write(f"Probability Outcome: {probs_percent} %")
+                st.write(f"Probability Outcome: {probs[0][1]}")
             else:
                 st.subheader("The Model Predicts You ARE NOT a LinkedIn User ")
-                st.write(f"Probability Outcome: {probs_percent} %")
+                st.write(f"Probability Outcome: {probs[0][1]}")
 else:
     st.write("")
