@@ -176,9 +176,15 @@ predicted_class = lr.predict([person])
 probs = lr.predict_proba([person])
 
 st.markdown("***")
+   
 
-st.button("Predict"):
-st.write(probs)
-
-
+if st.button('Predict'):
+    for i in predicted_class:
+                if i == 1:
+                        st.subheader("You are a LinkedIn user")
+                        st.write(f"Probability xxxxx: {probs[0][1]}")
+                else:
+                        st.subheader("You are not a LinkedIn user")
+                        st.write(f"Probability xxxxxx: {probs[0][1]}")
+else:
 
