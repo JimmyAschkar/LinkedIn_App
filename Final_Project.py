@@ -30,7 +30,7 @@ st.subheader("Instructions:\n Please complete the attribute form below to determ
 
 st.subheader("Attributes:")
 ##EDUCATION## 
-educ = st.selectbox("Education level", 
+educ = st.selectbox("What Is Your Education Level?", 
              options = ["Less Than High School",
                         "High School Incomplete",
                         "High School Graduate",
@@ -58,7 +58,7 @@ else:
     educ = 8
 
 ##INCOME##
-inc = st.selectbox("Household Income", 
+inc = st.selectbox("What Is Your Household Income? (Range)", 
              options = ["Less than $10,000",
                         "10 to under $20,000",
                         "20 to under $30,000",
@@ -89,7 +89,7 @@ else:
     inc = 9
 
 ##PARENT##
-par = st.selectbox("Parent", 
+par = st.selectbox("Are You A Parent?", 
              options = ["Yes",
              "No"])
 
@@ -99,7 +99,7 @@ else:
     par = 0
 
 ##MARIED##
-mar = st.selectbox("Marital Status", 
+mar = st.selectbox("What Is Your Marital Status", 
              options = ["Married",
              "Not Married"])
 
@@ -118,7 +118,7 @@ if gend == "Married":
 else:
     gend = 0
 
-Ag = st.slider(label="Age - Drag Slider", 
+Ag = st.slider(label="How Old Are You? (Drag Slider)", 
           min_value=1,
           max_value= 97,
           value= 25)
@@ -177,14 +177,15 @@ probs = lr.predict_proba([person])
 
 st.markdown("***")
    
-
+st.subheader("The Results Are In...")
 if st.button('Predict'):
         for i in predicted_class:
             if i == 1:
-                st.subheader("Linked In User")
-                st.write(f"Probability xxxxx: {probs[0][1]}")
+                
+                st.subheader("The Model Predicts You ARE a LinkedIn User")
+                #st.write(f"Probability xxxxx: {probs[0][1]}")
             else:
-                st.subheader("You are not a LinkedIn user")
-                st.write(f"Probability xxxxxx: {probs[0][1]}")
+                st.subheader("The Model Predicts You ARE NOT a LinkedIn User")
+                #st.write(f"Probability xxxxxx: {probs[0][1]}")
 else:
     st.write("")
