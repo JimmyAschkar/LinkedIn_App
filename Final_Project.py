@@ -9,16 +9,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix 
 
-# [theme]
-# backgroundColor="#fafdff"
-# secondaryBackgroundColor="#edf1f3"
-# textColor="#080808"
+[theme]
+backgroundColor="#fafdff"
+secondaryBackgroundColor="#edf1f3"
+textColor="#080808"
 
-# col1, col2 = st.columns([70, 150])
-# with col1:
-#     st.image("linkedin-logo.png", width = 350)
-# with col2:
-#     st.markdown("# User Prediction App")
 
 st.image("linkedin-logo.png")
 st.markdown("# User Prediction App")
