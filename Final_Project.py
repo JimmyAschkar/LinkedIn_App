@@ -174,7 +174,7 @@ probs_percent = round(probs) * 100
 
 st.markdown("***")
    
-st.subheader("The Results Are In... )
+st.subheader("The Results Are In...")
 if st.button('Predict'):
         for i in predicted_class:
             if i == 1:
