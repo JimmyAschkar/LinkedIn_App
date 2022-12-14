@@ -179,12 +179,12 @@ st.markdown("***")
    
 
 if st.button('Predict'):
-    for i in predicted_class:
-                if i == 1:
-                        st.subheader("You are a LinkedIn user")
-                        st.write(f"Probability xxxxx: {probs[0][1]}")
-                else:
-                        st.subheader("You are not a LinkedIn user")
-                        st.write(f"Probability xxxxxx: {probs[0][1]}")
+        for i in predicted_class:
+            if i == 1:
+                st.subheader("Linked In User")
+                st.write(f"Probability xxxxx: {probs[0][1]}")
+            else:
+                st.subheader("You are not a LinkedIn user")
+                st.write(f"Probability xxxxxx: {probs[0][1]}")
 else:
-
+    st.write("")
