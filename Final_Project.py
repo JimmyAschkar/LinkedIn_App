@@ -177,10 +177,10 @@ if st.button('Predict'):
         for i in predicted_class:
             if i == 1:
                 
-                st.subheader("The Model Predicts A {probs_percent[0][100]} Chance You ARE a LinkedIn User")
-                #st.write(f"Probability xxxxx: {probs[0][1]}")
+                st.subheader("The Model Predicts You ARE a LinkedIn User")
+                st.write(f"Probability Outcome: {probs_percent[0][100]}")
             else:
                 st.subheader("The Model Predicts You ARE NOT a LinkedIn User ")
-                st.write(f"Probability Outcome: {probs_percent[0][100]}")
+                st.write(f"Probability Outcome: {probs_percent}")
 else:
     st.write("")
